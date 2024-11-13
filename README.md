@@ -14,11 +14,6 @@ Features:
 * Renewable energy supply technologies, including weather-dependent (for example solar thermal) and variable operational costs (for example heat pumps)
 * Intra-day thermal energy storage
 
-
-Modeling of the paper: "Ideal-Typical Utility Infrastructure at Chemical
-Sites – Definition, Operation and Defossilization" (<>) in PyPSA with time series
-aggregation.
-
 ## Installing
 
 Use git to clone this repository into your computer. Then, install topotherm
