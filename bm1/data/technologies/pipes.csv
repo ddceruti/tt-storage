@@ -1,0 +1,2 @@
+id,heat_loss_a,heat_loss_b,capacity_a,capacity_b,power_flow_max_kW,power_flow_max_partload,lifetime,discount_rate
+0,3.228000e-07,0.01592,0.02144,567.335,5.90749689e+04,1.,40,0.09
