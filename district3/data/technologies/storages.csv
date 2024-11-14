@@ -1,0 +1,3 @@
+storages,charge_eff,discharge_eff,self_discharge,s_ratio_charge,s_ratio_discharge,investment_costs,starting_ending_state_of_charge,lifetime,discount_rate
+0,0.99,0.99,8.33E-5,0.5,0.5,3,0.5,40,0.09
+1,0.99,0.99,8.33E-5,0.5,0.5,3,0.5,40,0.09

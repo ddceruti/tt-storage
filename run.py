@@ -139,9 +139,6 @@ def main(case_folder: str,
     collection.indices['steps_store'] = np.append(
         collection.indices['steps'], collection.indices['steps'][-1]+1)
 
-    flh_orig = 2463.374267780726
-    print(f'original FLH: {flh_orig}')
-
     flh = (collection.xarrays['Q_c']
            * collection.indices['w_d']
            * collection.indices['w_t']).sum() \
@@ -149,7 +146,6 @@ def main(case_folder: str,
     print(f'aggregated FLH: {flh.values}')
     # flh to a text file
     with open(os.path.join(results_path, 'flh.txt'), 'w', encoding='utf-8') as f:
-        f.write(f'original FLH: {flh_orig}\n')
         f.write(f'aggregated FLH: {flh.values}\n')
 
     # read in and store all parameters
@@ -165,12 +161,12 @@ def main(case_folder: str,
 
     # solve the model
     solver_options = {
-        'TimeLimit': 3600*48,
+        'TimeLimit': 3600,
         'MIPGap': 0.0005,
         # random seed
         'Seed': 42,
-        'ConcurrentMIP': 4,
-        'Threads': 8,
+        # 'ConcurrentMIP': 4,
+        # 'Threads': 8,
     }
 
     # start time
@@ -214,13 +210,13 @@ def main(case_folder: str,
 
 if __name__ == '__main__':
     main(
-        case_folder='district3-nostore',
+        case_folder='bm1',
         # results_folder='bc-design-economic-3p-24s-dayahead-12safety',
-        results_folder='rerun-bc-design-temp-forced-3p-6s-const-100rev',
+        results_folder='results',
         forced=True,
         revenue=100E-3,
         design_load=True,
-        n_periods=3,
-        n_segments=6,
+        n_periods=1,
+        n_segments=3,
         period_length=24
     )

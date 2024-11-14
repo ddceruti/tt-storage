@@ -1,0 +1,4 @@
+producers,name,investment_costs,lifetime,discount_rate,operating_costs,operating_costs_ts,efficiency,efficiency_ts,availability_ts
+0,Biomass Boiler,860,25,0.09,35E-3,,1.14,,
+1,Heat Pump,1010,25,0.09,95.18e-3,,3.4,,
+2,Solar Thermal,287,30,0.09,0.2E-3,,1,,solar
