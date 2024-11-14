@@ -9,7 +9,7 @@ network topology and pipe sizing.
 
 Features:
 
-* MILP formulation for pipe routing and topology
+* MILP formulation for pipe routing and topology based on topotherm
 * Flexible representative periods and time segmentation
 * Renewable energy supply technologies, including weather-dependent (for example solar thermal) and variable operational costs (for example heat pumps)
 * Intra-day thermal energy storage
@@ -19,9 +19,12 @@ Features:
 Use git to clone this repository into your computer. Then, install topotherm
 with a package manager such as Anaconda, or directly with Python.
 
+### Cloning the repository
+
 ```git
-git clone URL
+git clone https://github.com/ddceruti/tt-storage.git
 ```
+
 ### Anaconda or mamba
 
 We recommend to install the dependencies with anaconda or mamba:
@@ -30,14 +33,14 @@ We recommend to install the dependencies with anaconda or mamba:
 cd tt-storage
 mamba env create -n tt-storage python=3.12
 mamba activate tt-storage
-pip install .
+pip install -r requirements.txt
 ```
 
 ### Solver
 
 #### Gurobi
 
-The results in the paper were obtained with the commercial solver gurobi.
+The results in the paper were obtained with the commercial solver gurobi version 11.
 A free academic license is available and can be installed by following
 the documentation [here](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python-).
 
@@ -53,12 +56,12 @@ mamba install -c conda-forge pyscipopt
 
 ## Usage
 
-Generate the input incidence matrices for the district with .parquet format (see example).
-Then, modify and run the either one of the three scripts in that folder.
+Generate the input incidence matrices for the district with .csv format (see examples).
+Then, run the main script with the appropiate arguments.
 
 ```bash
-cd example
-python run_sts.py
+mamba activate topotherm
+python run.py
 ```
 
 ## License
@@ -72,4 +75,3 @@ Please cite the full publication. A Zenodo DOI is also available for the code it
 ## Authors
 
 * Ceruti, Amedeo
-
