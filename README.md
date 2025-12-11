@@ -1,6 +1,6 @@
 # Topotherm Storage
 
-This is the open source software accompaining the publication submitted to Elsevier. The preprint is available here: <https://papers.ssrn.com/abstract=5024324>.
+This is the open source software accompaining the publication submitted to Elsevier. The paper is available here: <https://doi.org/10.1016/j.enconman.2025.120323>.
 
 ## Description
 
